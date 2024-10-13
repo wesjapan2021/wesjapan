@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://wesjapan2021.github.io/wesjapan/style.css">
+		<link rel="license" href="https://www.opensource.org/licenses/mit-license/">
+    <title>pedido</title>
+</head>
+<body>
+    <h1></h1>
+    <table>
+        <tbody>
+            <tr><td>NO VENTA:</td><td><<[NO VENTA]>></td></tr>
+            <tr><td>MODO VENTA:</td><td><<[FACTURADO]>></td></tr>
+            <tr><td>TRANSPORTE:</td><td><<[TRANSPORTE]>></td></tr>
+            <tr><td>FECHA:</td><td><<[FECHA]>></td></tr>
+            <tr><td>NOMBRE:</td><td><<[NOMBRE EMPRESA]>></td></tr>
+            <tr><td>NOMBRE CONTACTO:</td><td><<[NOMBRE]>></td></tr>
+            <tr><td>DIRECCION:</td><td><<[DESTINO]>></td></tr>
+            <tr><td>RUTA:</td><td><<[RUTA]>></td></tr>
+            <tr><td>AREA:</td><td><<[SECCION]>></td></tr>
+            <tr><td>NIT DEL CLIENTE:</td><td><<[NIT]>></td></tr>
+            <tr><td>CODIGO DE CLIENTE:</td><td><<[CLIENTE]>></td></tr>
+            <tr><td>TELEFONO:</td><td><<[TELEFONO]>></td></tr>
+        </tbody>
+    </table>
+    
+    <h2>DETALLES DEL PEDIDO</h2>
+    
+    <<Start: [Related VENTAs]>>
+    <table>
+        <thead>
+            <tr>
+                <th>Campo</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>UBICACION</td><td><<[UBICACION]>></td></tr>
+            <tr><td>CANTIDAD</td><td><<[CANTIDAD]>></td></tr>
+            <tr><td>PRODUCTO</td><td><<[PRODUCTO]>></td></tr>
+            <tr><td>DESCRIPCION</td><td><<[DESCRIPCION]>></td></tr>
+            <tr><td>PRECIO DE VENTA</td><td><<[PRECIO DE VENTA]>></td></tr>
+            <tr><td>SUBTOTAL</td><td><<[SUBTOTAL]>></td></tr>
+            <tr><td>TOTAL DE VENTA</td><td><<[TOTAL DE VENTA]>></td></tr>
+        </tbody>
+    </table>
+    <<End>>
+    
+    <p>MUCHAS GRACIAS POR SU PEDIDO, SE DESPACHARA LO ANTES POSIBLE!</p>
+    <p>DIOS LES BENDIGA!</p>
+    <p>ASESOR (A): <<[NOMBRE ASESOR]>></p>
+</body>
+</html>
