@@ -21,27 +21,31 @@
 <p>TELEFONO: &lt;&lt;[TELEFONO]&gt;&gt;</p>
 
 <p>DATOS DEL PEDIDO</p>
-<p>&lt;&lt;Start: [Related VENTAs]&gt;&gt;</p>
-<table>
-<table>
-        <thead>
-            <tr>
-                <th>UB</th>
-                <th>CANTIDAD</th>
-                <th>CODIGO</th>
-                <th>DESCRIPCION</th>
-                <th>PRECIO</th>
-                <th>SUBTOTAL</th>
-            </tr>
-<tbody>
-<tr><td>&lt;&lt;[UBICACION]&gt;&gt;</td></tr>
-<tr><td>&lt;&lt;[CANTIDAD]&gt;&gt;</td></tr>
-<tr><td>&lt;&lt;[PRODUCTO]&gt;&gt;</td></tr>
-<tr><td>&lt;&lt;[DESCRIPCION]&gt;&gt;</td></tr>
-<tr><td>&lt;&lt;[PRECIO DE VENTA]&gt;&gt;</td></tr>
-<tr><td>&lt;&lt;[SUBTOTAL]&gt;&gt;</td></tr>
+<table class="DATOS DE PEDIDO">
+				<thead>
+					<tr>
+						<th><span>**UB**</span></th>
+						<th><span>CANTIDAD</span></th>
+						<th><span>CODIGO</span></th>
+						<th><span>DESCRIPCION</span></th>
+						<th><span>PRECIO</span></th>
+						<th><span>SUBTOTAL</span></th>
+					</tr>
+				</thead>
+				<tbody>
+				<p><span>&lt;&lt;Start: SELECT(VENTA[ID],[NO VENTA]=[NO VENTA]) &gt;&gt;</span></p>
+					<tr>
+					<td><span>&lt;&lt;[UBICACION]&gt;&gt;</span></td>
+				        <td><span>&lt;&lt;[CANTIDAD]&gt;&gt;</span></td>
+					<td><span>&lt;&lt;[PRODUCTO]&gt;&gt;</span></td>
+					<td><span>&lt;&lt;[DESCRIPCION]&gt;&gt;</span></td>
+					<td><span>&lt;&lt;[PRECIO DE VENTA]&gt;&gt;</span></td>
+					<td><span>&lt;&lt;[SUBTOTAL]&gt;&gt;</span></td>
+					</tr>
+				<p><span>&lt;&lt; end &gt;&gt;</span></p>
+				</tbody>
+			</table>
 <tr><td>TOTAL DE VENTA</td><td>&lt;&lt;[TOTAL DE VENTA]&gt;&gt;</td></tr>
-
 
 <p>MUCHAS GRACIAS POR SU PEDIDO, SE DESPACHARA LO ANTES POSIBLE!</p>
 <p>DIOS LES BENDIGA!</P>
