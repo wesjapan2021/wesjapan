@@ -1,107 +1,79 @@
-<html lang="es">
-<head>
-    <meta base target="_self">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedido</title>
-    <style>
-          @page {
-            size: letter;
-            margin: 0;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: white;
-        }
-        .container {
-            width: 215.9mm;
-            min-height: 279.4mm;
-            padding: 10mm; /* Margen interno uniforme */
-            box-sizing: border-box;
-            background-color: white;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10mm;
-        }
-        .header img {
-            max-width: 200mm; /* Ajusta según el tamaño de tu logo */
-            height: auto;
-        }
-        
-        .header h1 {
-            margin: 1px;
-            font-size: 24px;
-            text-align: right;
-            border: 1px solid white;
-        }
-        .empresa-info {
-            text-align: right;
-            font-size: 10px;
-            margin-top: 5px;
-            border: 1px solid white;
-        }
-        .pedido-info {
-            margin-top: 20px;
-            text-align: left;
-            font-size: 10px;
-        }
-        .pedido-info p {
-            margin: 5px 0;
-        }
-        .datos-cliente {
-            margin-top: 20px;
-            text-align: left;
-            font-size: 10px;
-        }
-        .table-container {
-            margin-top: 20px;
-            font-size: 10px;
-            page-break-inside: auto;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            page-break-inside: auto;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 3px;
-            page-break-inside: avoid;
-        }
-        tr {
-            page-break-inside: avoid;
-            page-break-after: auto;
-        }
-        th {
-            background-color: #9e9999;
-            font-weight: bold;
-        }
-        .totales {
-            text-align: right;
-            font-size: 10px;
-            margin-top: 20px;
-        }
-        .totales strong {
-            font-size: 10px;
-        }
-        #totalVenta, #nombreAsesor {
-            font-weight: bold;
-            color: black;
-            border: 1px solid white;
-        }
-        .despedida {
-            text-align: left;
-            margin-top: 20px;
-            font-size: 10px;
-        }
-        .despedida strong {
-            display: block;
-            margin-bottom: 5px;
-        }
-        </style>
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #000;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header img {
+    width: 200px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #000;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tbody td {
+    text-align: center;
+}
+
+tfoot td {
+    font-weight: bold;
+}
+
+p {
+    margin: 5px 0;
+}
+
+/* Specific Styling for the Company Information Section */
+.company-info th {
+    width: 150px;
+    text-align: right;
+}
+
+.company-info td {
+    text-align: left;
+}
+
+/* Specific Styling for the Order Details Table */
+.order-details th, .order-details td {
+    text-align: center;
+}
+
+/* Styling for Total Section */
+.total-row th {
+    text-align: right;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.total-row td {
+    text-align: right;
+    font-size: 14px;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
