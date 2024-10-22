@@ -2,86 +2,85 @@
 	<head>
 		<meta charset="utf-8">
 		<title>PEDIDO</title>
-		<link rel="stylesheet" href="https://wesjapan2021.github.io/wesjapan/style.css">
-		<link rel="license" href="https://www.opensource.org/licenses/mit-license/">
-	</head>
+		</head>
 	<body>
-		<header>
-			<h1>PEDIDO</h1>
-			<address>
-				<p>IYEP</p>
-				<p>NIT 23317442<br>2ª CALLE BARRIO LA LIBERTAD</p>
-				<p>JOYABAJ, QUICHE</p>
-			</address>
-
-			<div style="float: right;">
-			    <img alt="" src="https://acortar.link/caSNRS" style="width: 100px; height: 100px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
-			</div>
-		</header>
-		<article>
-			<h1>Recipient</h1>
-			<address>
-				<p>&lt;&lt;[CLIENTE].[NOMBRE EMPRESA]&gt;&gt;<br>-</p>
-                <p class="small-text"><br>DIRECCION.: &lt;&lt;[CLIENTE].[DIRECCION]&gt;&gt;</p>
-                <p class="small-text">TEL:&lt;&lt;[CLIENTE].[TELEFONO]&gt;&gt;</p>
-			</address>
-			<table class="meta">
+		<header></header>
+		<table>
 				<tr>
-					<th><span>ID VENTA</span></th>
-					<td><span>&lt;&lt;[NO VENTA]&gt;&gt;</span></td> <!-- Número de la venta -->
+					<th><span>CODIGO VENTA:</span></th>
+					<td><span>&lt;&lt;[NO VENTA]&gt;&gt;</span></td> 
 				</tr>
 				<tr>
-					<th><span>Fecha</span></th>
-					<td><span>&lt;&lt;[FECHA]&gt;&gt;</span></td> <!-- Fecha de la venta -->
+					<th><span>MODO VENTA</span></th>
+					<td><span>&lt;&lt;[FACTURADO]&gt;&gt;</span></td> 
 				</tr>
 				<tr>
-					<th><span>TOTAL DE VENTA</span></th>
-					<td><span>&lt;&lt;[TOTAL DE VENTA]&gt;&gt;</span></td> <!-- Total de la venta -->
+					<th><span>TRANSPORTE</span></th>
+					<td><span>&lt;&lt;[TRANSPORTE]&gt;&gt;</span></td> 
+				</tr>
+				<tr>
+					<th><span>FECHA</span></th>
+					<td><span>&lt;&lt;[FECHA]&gt;&gt;</span></td> 
+				</tr>
+				<tr>
+					<th><span>NOMBRE</span></th>
+					<td><span>&lt;&lt;[CLIENTE].[NOMBRE EMPRESA]&gt;&gt;</span></td> 
+				</tr>
+				<tr>
+					<th><span>NOMBRE CONTACTO:</span></th>
+					<td><span>&lt;&lt;[CLIENTE].[NOMBRE]&gt;&gt;</span></td> 
+				</tr>
+				<tr>
+					<th><span>RUTA:</span></th>
+					<td><span>&lt;&lt;[CLIENTE].[RUTA]&gt;&gt;</span></td> 
+				</tr>
+				<tr>
+					<th><span>AREA</span></th>
+					<td><span>&lt;&lt;[CLIENTE].[SECCION]&gt;&gt;</span></td> 
+				</tr>
+				<tr>
+					<th><span>NIT DEL CLIENTE</span></th>
+					<td><span>&lt;&lt;[CLIENTE].[NIT]&gt;&gt;</span></td> 
+				</tr>
+				<tr>
+					<th><span>TEL.:</span></th>
+					<td><span>&lt;&lt;[CLIENTE].[TELEFONO]&gt;&gt;</span></td> 
 				</tr>
 			</table>
-			<table class="inventory">
+			<table>
 				<thead>
 					<tr>
+						<th><span>UB</span></th>
+						<th><span>CANTIDAD</span></th>
 						<th><span>CODIGO</span></th>
 						<th><span>DESCRIPCION</span></th>
 						<th><span>PRECIO</span></th>
-						<th><span>CANTIDAD</span></th>
 						<th><span>SUBTOTAL</span></th>
 					</tr>
 				</thead>
 				<tbody>
-				<p><span>&lt;&lt;Start: SELECT(VENTA[ID], [NO VENTA] = [NO VENTA])&gt;&gt;</span></p>
+				<p><span>&lt;&lt;Start: SELECT(VENTA[ID], [NO VENTA] = [_THISROW].[NO VENTA])&gt;&gt;</span></p>
 					<tr>
-						<td><a class="cut">-</a>&lt;&lt;[PRODUCTO]&gt;&gt;</td>
-						<td><span>&lt;&lt;[DESCRIPCION]&gt;&gt;</span></td>
-				        <td><span>&lt;&lt;[PRECIO DE VENTA]&gt;&gt;</span></td>
+						<td><span>&lt;&lt;[UBICACION]&gt;&gt;</span></td>
 						<td><span>&lt;&lt;[CANTIDAD]&gt;&gt;</span></td>
+						<td><span>&lt;&lt;[PRODUCTO]&gt;&gt;</span></td>
+						<td><span>&lt;&lt;[DESCRIPCION]&gt;&gt;</span></td>
+				        	<td><span>&lt;&lt;[PRECIO DE VENTA]&gt;&gt;</span></td>
 						<td><span>&lt;&lt;[SUBTOTAL]&gt;&gt;</span></td>
 					</tr>
 				<p><span>&lt;&lt;End&gt;&gt;</span></p>
 				</tbody>
 			</table>
-			<a class="add">+</a>
-			<table class="balance">
+			
+			<table>
 				<tr>
-					<th><span>Total</span></th>
-					<td><span>&lt;&lt;[TOTAL DE VENTA]&gt;&gt;</span></td> <!-- Total de la venta -->
+					<th><span>TOTAL DE VENTA</span></th>
+					<td><span>&lt;&lt;[TOTAL DE VENTA]&gt;&gt;</span></td> 
 				</tr>
-				<tr>
-					<th><span>DIAS DE CREDITO</span></th>
-					<td><span data-prefix="Q"></span><span>0.00</span></td>
-				</tr>
-				<tr>
-					<th><span>Total a pagar</span></th>
-					<td><span>&lt;&lt;[TOTAL DE VENTA]&gt;&gt;</span></td> <!-- Total a pagar -->
-				</tr>
+					
 			</table>
-		</article>
-		<aside>
-			<h1><span>Notas adicionales</span></h1>
-			<div>
-				<p>SU CREDITO ES DE 30 DIAS, CUIDELO!</p>
-			</div>
-		</aside>
+				<p>MUCHAS GRACIAS POR SU PEDIDO, SE DESPACHARA LO ANTES POSIBLE!</p>
+		<p>DIOS LES BENDIGA!</p>
+	<P><span>&lt;&lt;[VENDEDOR].[NOMBRE]&gt;&gt;</span></td>
 	</body>
 </html>
